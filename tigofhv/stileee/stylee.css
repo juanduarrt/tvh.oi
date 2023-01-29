@@ -1,0 +1,823 @@
+/*declarar constantes de diseño para las 
+fuentes, colores y recursos*/
+
+
+/* :root {
+        --textos: 'Lato', sans-serif;
+        --titulos: 'Roboto', sans-serif;
+        --colorHeader: rgba(41, 36, 36, 0.6);
+        --colorFooter: #000;
+    }
+    /* estilos para el cuerpo (body)
+   se utiliza el selector de etiqueta*/
+
+
+/*configuraciones globales*/
+
+body {
+    background: #739190;
+}
+
+p {
+    position: relative;
+    margin-left: 333px;
+}
+
+.btn {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+
+.btn.click {
+    left: 260px;
+}
+
+.btn span {
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.btn.btn.click span::before {
+    content: '\feed/';
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background: #1b1b1b;
+    transition: left 0.4s;
+}
+
+.sidebar.show {
+    left: 1px;
+}
+
+.sidebar.text {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+nav ul {
+    background: #d57878;
+    height: 100px;
+    width: 100px;
+    list-style: none;
+}
+
+nav ul li {
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li :last-child {
+    border-bottom: 1px solid gold;
+}
+
+nav ul.feat-show.show {
+    display: block;
+}
+
+nav ul.serv-show.show1 {
+    display: block;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 18px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+
+nav ul li.active a {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: cyan;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: cyan;
+    position: relative;
+}
+
+nav ul ul {
+    position: static;
+    display: none;
+}
+
+nav ul .feat-show.show {
+    display: block;
+}
+
+nav ul ul li {
+    line-height: 42px;
+    border-bottom: none;
+    color: cyan
+}
+
+nav ul ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+    font-size: 22px;
+}
+
+nav ul li.active ul li a {
+    color: #e6e6e6;
+    background: #1b1b1b;
+    border-left-color: transparent;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: transparent;
+}
+
+nav ul li a span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: trasform 0.4s;
+}
+
+nav ul ul li a:hover span {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+nav ul li a span.rotate {
+    transform: translateY(show);
+}
+
+.home-wrapper {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+.btn {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+
+.btn.click {
+    left: 260px;
+    margin-top: 25px;
+}
+
+.btn span {
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background: #1b1b1b;
+    transition: left 0.4s;
+}
+
+.sidebar.show {
+    left: 0px;
+}
+
+.sidebar.text {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+nav ul {
+    background: #1b1b1b;
+    height: 100px;
+    width: 100px;
+    list-style: none;
+}
+
+nav ul li {
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li :last-child {
+    border-bottom: 1px solid rgb(77, 178, 232);
+}
+
+nav ul.feat-show.show {
+    display: block;
+}
+
+nav ul.serv-show.show1 {
+    display: block;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 18px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+
+nav ul li.active a {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: cyan;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: cyan;
+    position: relative;
+}
+
+nav ul ul {
+    position: static;
+    display: none;
+}
+
+nav ul .feat-show.show {
+    display: block;
+}
+
+nav ul ul li {
+    line-height: 42px;
+    border-bottom: none;
+    color: cyan
+}
+
+nav ul ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+    font-size: 22px;
+}
+
+nav ul li.active ul li a {
+    color: #e6e6e6;
+    background: #1b1b1b;
+    border-left-color: transparent;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: transparent;
+}
+
+nav ul li a span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: trasform 0.4s;
+}
+
+nav ul ul li a:hover span {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+nav ul li a span.rotate {
+    transform: translateY(show);
+}
+
+h1 {
+    text-align: center;
+}
+
+h1:hover {
+    color: rgb(240, 203, 93);
+    text-decoration: underline;
+    border: #000;
+}
+
+h2:hover {
+    color: rgb(201, 201, 119);
+    font-weight: bold;
+}
+
+section {
+    margin-left: 25;
+}
+
+h6 p {
+    align-content: center;
+    transition: all;
+    border-radius: 2px 0px 2px;
+    transition: all 3ms;
+    padding: 130px;
+}
+
+
+/*sintaxis para las clases en css es con punto (.)*/
+
+.home-wrapper {
+    background: linear-gradient(rgba(239, 232, 232, 0.678), rgba(0, 0, 0, 0.6)), url('images/background.jpg') no-repeat center top;
+    background-size: contain;
+    color: rgb(210, 205, 224);
+}
+
+.box img {
+    top: 25px;
+    left: 200px;
+    background-color: rgb(13, 12, 13);
+}
+
+.container img {
+    box-sizing: content-box;
+    box-sizing: content-box;
+    border-radius: 15px;
+    left: 25px;
+    margin: 33px;
+}
+
+.container {
+    top: 250px;
+    left: 33px;
+    bottom: 33px;
+    margin-left: 25px;
+}
+
+
+/*header*/
+
+header {
+    border-width: 71px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 12px;
+    position: fixed;
+    /*fija el elemento en el html*/
+    left: 83%;
+    background-color: rgba(104, 99, 105, 0.6);
+}
+
+.titulo {
+    font-size: 55px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.galeria img {
+    box-shadow: 0 8px 10px -4px rgba(0, 0, 0, .6);
+    border-radius: 15px;
+}
+
+.materialbox-caption {
+    bottom: 30px;
+    right: 0;
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    background: #000;
+    box-shadow: 5px 5px #fff;
+    font-size: 20px;
+    color: #fff;
+    line-height: 28px;
+}
+
+.galeria .col {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .materialbox-caption {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .materialbox-caption {
+        width: 70%;
+    }
+}
+
+header img {
+    left: 2px;
+    width: 70px;
+    top: 3px;
+    margin: left 12px;
+    border: solid 3px gold;
+    left: 17%;
+    padding: 1px;
+    top: 2px;
+    position: relative;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header nav a {
+    color: rgb(54, 3, 182);
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: rgb(248, 230, 127);
+    font-weight: bold;
+}
+
+header nav a.active {
+    color: rgb(41, 24, 57)!important;
+    background-color: rgb(16, 2, 16);
+    border-radius: 3px;
+}
+
+
+/*home*/
+
+
+/*los identificadores (id) en el html, su sintaxis en css es el numeral (#) */
+
+#home {
+    text-align: center;
+    padding: 200px 0 150px;
+}
+
+.btn {
+    position: relative;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+    padding-left: 12px;
+}
+
+.btn.click {
+    left: 260px;
+}
+
+.btn span {
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.btn.btn.click span::before {
+    content: '\feed';
+}
+
+.sidebar.show {
+    left: 2px;
+}
+
+.sidebar.text {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+nav ul {
+    background: #1b1b1b;
+    height: 100px;
+    width: 100px;
+    list-style: none;
+}
+
+nav ul li {
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li :last-child {
+    border-bottom: 1px solid gold;
+}
+
+nav ul.feat-show.show {
+    display: block;
+}
+
+nav ul.serv-show.show1 {
+    display: block;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 18px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+
+nav ul li.active a {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: cyan;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: cyan;
+    position: relative;
+}
+
+nav ul ul {
+    position: static;
+    display: none;
+}
+
+nav ul .feat-show.show {
+    display: block;
+}
+
+nav ul ul li {
+    line-height: 42px;
+    border-bottom: none;
+    color: cyan
+}
+
+nav ul ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+    font-size: 22px;
+}
+
+nav ul li.active ul li a {
+    color: #e6e6e6;
+    background: #1b1b1b;
+    border-left-color: transparent;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: transparent;
+}
+
+nav ul li a span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: trasform 0.4s;
+}
+
+nav ul ul li a:hover span {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+nav ul li a span.rotate {
+    transform: translateY(show);
+}
+
+#home h1 {
+    line-height: 1.2;
+    color: rgb(14, 13, 7)
+}
+
+#home p {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    color: rgb(98, 84, 115);
+}
+
+#home .divider {
+    width: 50px;
+    margin: 0 auto;
+    border-top: 5px solid #fed136;
+}
+
+.social a {
+    color: rgb(223, 226, 242);
+    display: inline-block;
+    background-color: #20ba5a;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 60px;
+    line-height: 30px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    padding: 12px;
+    margin-left: 100px;
+    margin-bottom: 15px;
+}
+
+.social a:hover {
+    background-color: #302a31;
+}
+
+
+/*secciones*/
+
+section {
+    padding: 80px 0;
+}
+
+p {
+    text-align: justify;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 70px;
+}
+
+h4 {
+    margin-left: 70px;
+    padding: 12px;
+}
+
+.box {
+    padding-left: 50px;
+}
+
+
+/*servicios*/
+
+#servicios .box {
+    display: inline-block;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    border: solid 7px #00646D;
+    top: 5px;
+    box-sizing: content-box;
+    /* float: none; */
+    margin: 12px;
+    width: 189px;
+    left: 133px;
+    height: 333px;
+    bottom: 1px;
+    box-sizing: content-box;
+    overflow: hidden;
+    background-color: #f7fbfc;
+}
+
+#servicios .box h3 {
+    text-align: center;
+    margin-top: 10px;
+    border: solid 7px #00646D;
+}
+
+#servicios .box img {
+    padding-left: 50%;
+    padding-bottom: 10px;
+    border: solid 5px black;
+    transition-duration: 5s;
+    color: grey;
+    padding: 5px;
+}
+
+#servicios .box h3 {
+    text-align: center;
+    margin-top: 10px;
+    color: gold;
+}
+
+#servicios .box p {}
+
+
+/*Portafolio*/
+
+#portfolio .box {
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    padding: 1%;
+    background-color: black;
+}
+
+.box {
+    width: 100%
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    line-height: 63px;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 300ms ease;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    .btn-wsp {
+        width: 63px;
+        height: 63px;
+        line-height: 66px;
+    }
+    footer {
+        width: 200%;
+        background-color: #000;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
+
+servicios */ #servicios .box {
+    display: inline-block;
+    width: 33%;
+    /* el ancho total es de 100%, se desea dividir en tre columnas, el 33.33.33  */
+    padding: 8px;
+}
+
+#servicios .box img {
+    padding-left: 30%;
+    padding-bottom: 5px;
+}
+
+.box {
+    width: 250PX;
+}
